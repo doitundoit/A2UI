@@ -45,11 +45,19 @@ import "./ui/ui.js";
 import { AppConfig } from "./configs/types.js";
 import { config as restaurantConfig } from "./configs/restaurant.js";
 import { config as contactsConfig } from "./configs/contacts.js";
+import { config as rizzchartsConfig } from "./configs/rizzcharts.js";
 import { styleMap } from "lit/directives/style-map.js";
+
+// Custom components
+import { GoogleMap } from "./ui/google-map.js";
+
+// Register custom components with A2UI
+v0_8.UI.componentRegistry.register("GoogleMap", GoogleMap);
 
 const configs: Record<string, AppConfig> = {
   restaurant: restaurantConfig,
   contacts: contactsConfig,
+  rizzcharts: rizzchartsConfig,
 };
 
 @customElement("a2ui-shell")

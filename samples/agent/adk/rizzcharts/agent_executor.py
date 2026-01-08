@@ -58,7 +58,7 @@ class RizzchartsAgentExecutor(A2aAgentExecutor):
                 STANDARD_CATALOG_ID: str(spec_root.joinpath("standard_catalog_definition.json")),
                 RIZZCHARTS_CATALOG_URI: "rizzcharts_catalog_definition.json",
             },
-            default_catalog_uri=STANDARD_CATALOG_ID
+            default_catalog_uri=RIZZCHARTS_CATALOG_URI
         )
         agent = rizzchartsAgent.build_agent()
         runner = Runner(
